@@ -38,7 +38,9 @@ const Router: React.FC = () => {
         },
       ],
     },
-  ]);
+  ], {
+    basename: '/movies'
+  });
 
   return <RouterProvider router={router} />;
 };
