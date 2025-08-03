@@ -1,24 +1,20 @@
-import { useNowPlaying } from '@/hooks/api/useNowPlaying';
 import S from './styles.module.css';
 
+import { useNowPlaying } from '@/hooks/api/useNowPlaying';
+
 import { MovieCard } from '@/components/MovieCard';
+import { SectionMovies } from '@/components/SectionMovies';
 
 export default function HomePage() {
   const { data: nowPlaying } = useNowPlaying();
 
-  console.log('Now Playing:', nowPlaying);
-
   return (
     <div className="">
-      <section className={S.section}>
-        <h2 className={S.sectionTitle}>Lançamentos</h2>
-
-        <div className={S.sectionContent}>
-          {nowPlaying?.results.map((movie) => {
-            return <MovieCard key={movie.id} movie={movie} />;
-          })}
-        </div>
-      </section>
+      <SectionMovies title="Em Lançamento">
+        {nowPlaying?.results.map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
+        ))}
+      </SectionMovies>
     </div>
   );
 }
