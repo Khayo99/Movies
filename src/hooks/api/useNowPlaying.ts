@@ -1,4 +1,4 @@
-import { fetchNowPlaying } from '@/api/services/now_playing.services';
+import { fetchNowPlaying } from '@/api/services/now_playing.service';
 
 import { useQuery } from '@tanstack/react-query';
 
