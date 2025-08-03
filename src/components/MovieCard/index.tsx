@@ -7,11 +7,12 @@ import { FaStar } from 'react-icons/fa';
 
 interface MovieCardProps {
   movie: Movie;
+  handleClick?: (movie: Movie) => void;
 }
 
-export const MovieCard = ({ movie }: MovieCardProps) => {
+export const MovieCard = ({ movie, handleClick }: MovieCardProps) => {
   return (
-    <div className={S.movieCard}>
+    <div className={S.movieCard} onClick={() => handleClick?.(movie)}>
       <div className={S.wrapper}>
         <section className={S.content}>
           <img

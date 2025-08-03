@@ -17,7 +17,7 @@ export const fetchMoviesByGenres = async (
       };
     })
     .catch((error) => {
-      errorHandling(error, 'Falha ao buscar filmes em lançamento');
+      errorHandling(error, 'Falha ao buscar filmes em gêneros');
       throw error;
     });
 };

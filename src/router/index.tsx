@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import { Layout } from '@/theme/layout';
 import HomePage from '@/pages/HomePage';
+import MovieDetails from '@/pages/MovieDetails';
 
 const Router: React.FC = () => {
   const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const Router: React.FC = () => {
         {
           path: 'homePage',
           element: <HomePage />,
+        },
+        {
+          path: 'movieDetails/:id',
+          element: <MovieDetails />,
         },
       ],
     },
