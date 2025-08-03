@@ -15,7 +15,7 @@
 }
 
 .heroContent {
-  @apply absolute bottom-0 left-0 right-0 p-4 md:p-8 max-w-7xl mx-auto;
+  @apply absolute bottom-0 left-0 right-0 p-4 md:p-8 max-w-7xl mx-auto lg:p-4;
 }
 
 .titleSection {
@@ -91,7 +91,7 @@
 }
 
 .posterSection {
-  @apply flex justify-center lg:justify-start order-2 lg:order-1;
+  @apply flex justify-center lg:justify-start order-2 md:order-1;
 }
 
 .posterImage {
@@ -99,11 +99,11 @@
 }
 
 .infoSection {
-  @apply lg:col-span-2 order-1 lg:order-2;
+  @apply lg:col-span-2 order-2;
 }
 
 .sectionTitle {
-  @apply text-xl md:text-2xl font-bold mb-4;
+  @apply text-xl md:text-2xl font-bold mb-4 text-black md:text-white;
 }
 
 .overviewFull {
@@ -148,36 +148,4 @@
 
 .backButton {
   @apply bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors text-sm md:text-base;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .heroContent {
-    @apply p-4;
-  }
-
-  .title {
-    @apply text-2xl;
-  }
-
-  .actionButtons {
-    @apply flex-col;
-  }
-
-  .playButton,
-  .watchlistButton {
-    @apply w-full justify-center;
-  }
-
-  .detailsGrid {
-    @apply grid-cols-1;
-  }
-
-  .posterSection {
-    @apply order-1;
-  }
-
-  .infoSection {
-    @apply order-2;
-  }
 }

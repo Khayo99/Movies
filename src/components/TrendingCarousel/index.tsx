@@ -16,6 +16,9 @@ export const TrendingCarousel = ({
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate();
 
+  const displayMovies = movies.slice(0, 4);
+  const currentMovie = displayMovies[currentSlide];
+
   useEffect(() => {
     if (movies.length === 0 || isLoading) return;
 
@@ -69,9 +72,6 @@ export const TrendingCarousel = ({
   }
 
   if (!movies || movies.length === 0) return null;
-
-  const displayMovies = movies.slice(0, 4);
-  const currentMovie = displayMovies[currentSlide];
 
   return (
     <div className={S.carouselContainer}>
