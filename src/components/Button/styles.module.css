@@ -1,0 +1,31 @@
+.button {
+  @apply min-w-28 h-10 inline-flex items-center justify-center gap-2 px-7 cursor-pointer font-medium rounded-3xl text-sm transition duration-300 ease-in-out select-none hover:opacity-90;
+
+  &:disabled {
+    @apply opacity-60 cursor-not-allowed;
+  }
+
+  &:active {
+    @apply scale-95 brightness-90 !duration-200;
+  }
+
+  & .loading {
+    @apply text-white;
+  }
+}
+
+.primary {
+  @apply bg-primary text-white;
+}
+
+.red {
+  @apply bg-red text-white;
+}
+
+.white {
+  @apply bg-white border border-primary !text-primary;
+
+  & .loading {
+    @apply text-primary;
+  }
+}

@@ -1,0 +1,24 @@
+.navbar {
+  @apply h-16 bg-white shadow-md border-b;
+}
+
+.wrapper {
+  @apply flex flex-row items-center mx-10 h-full;
+}
+
+.logo {
+  @apply w-auto h-8;
+}
+
+.links {
+  @apply px-8 flex flex-row items-center gap-1;
+
+  & .link {
+    @apply flex flex-row items-center p-3 gap-3 font-semiBold text-textColor;
+
+    &:hover,
+    &.active {
+      @apply text-white bg-primary rounded transition-all duration-300 ease-in-out;
+    }
+  }
+}

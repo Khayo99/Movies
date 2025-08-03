@@ -1,0 +1,11 @@
+.inputSearch {
+  @apply w-full h-10 border border-borderColor rounded-full px-4 text-textColor;
+
+  &:placeholder {
+    @apply placeholder:text-zinc-600;
+  }
+
+  &:focus {
+    @apply border-primary outline-1 outline-primary;
+  }
+}
