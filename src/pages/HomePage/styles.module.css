@@ -1,0 +1,9 @@
+.section {
+  & .sectionTitle {
+    @apply text-xl font-bold mb-4;
+  }
+
+  & .sectionContent {
+    @apply grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4;
+  }
+}

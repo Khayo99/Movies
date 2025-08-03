@@ -1,0 +1,7 @@
+.movieCard {
+  @apply cursor-pointer transition-all duration-200 hover:shadow-lg hover:scale-105;
+}
+
+.wrapper {
+  @apply flex flex-col gap-2 p-4 bg-white rounded-lg shadow-md;
+}
