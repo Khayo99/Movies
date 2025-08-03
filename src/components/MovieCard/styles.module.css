@@ -3,5 +3,21 @@
 }
 
 .wrapper {
-  @apply flex flex-col gap-2 p-4 bg-white rounded-lg shadow-md;
+  @apply flex flex-col h-full bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.content {
+  @apply relative;
+}
+
+.footer {
+  @apply flex-1 flex flex-col justify-between p-4;
+
+  & .title {
+    @apply font-semibold text-gray-900 mb-4 line-clamp-2;
+  }
+
+  & .date {
+    @apply flex items-center space-x-3 text-gray-600 text-sm;
+  }
 }
