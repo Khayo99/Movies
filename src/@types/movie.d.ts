@@ -14,3 +14,8 @@ type Movie = {
   vote_average: number;
   vote_count: number;
 };
+
+type PayloadMoviesByGenres = {
+  with_genres: number;
+  sort_by: string;
+};
