@@ -11,39 +11,34 @@ import SearchResultsPage from '@/pages/SearchResultsPage';
 import MovieDetails from '@/pages/MovieDetails';
 
 const Router: React.FC = () => {
-  const router = createBrowserRouter(
-    [
-      {
-        path: '/',
-        element: <Layout />,
-        children: [
-          {
-            index: true,
-            element: <Navigate to="/homePage" replace />,
-          },
-          {
-            path: 'homePage',
-            element: <HomePage />,
-          },
-          {
-            path: 'trending',
-            element: <TrendingPage />,
-          },
-          {
-            path: 'search',
-            element: <SearchResultsPage />,
-          },
-          {
-            path: 'movieDetails/:id',
-            element: <MovieDetails />,
-          },
-        ],
-      },
-    ],
+  const router = createBrowserRouter([
     {
-      basename: import.meta.env.PROD ? '/Movies' : undefined,
-    }
-  );
+      path: '/',
+      element: <Layout />,
+      children: [
+        {
+          index: true,
+          element: <Navigate to="/homePage" replace />,
+        },
+        {
+          path: 'homePage',
+          element: <HomePage />,
+        },
+        {
+          path: 'trending',
+          element: <TrendingPage />,
+        },
+        {
+          path: 'search',
+          element: <SearchResultsPage />,
+        },
+        {
+          path: 'movieDetails/:id',
+          element: <MovieDetails />,
+        },
+      ],
+    },
+  ]);
 
   return <RouterProvider router={router} />;
 };

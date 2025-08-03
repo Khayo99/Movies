@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
@@ -12,5 +12,5 @@ export default defineConfig(({ command }) => ({
   build: {
     outDir: 'dist',
   },
-  base: command === 'build' ? '/Movies/' : '/',
-}));
+  base: '/',
+});
