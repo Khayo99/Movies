@@ -3,7 +3,7 @@ import S from './styles.module.css';
 import { NavbarLink } from '@/@types/navbar';
 import logoMorpha from '@/assets/images/logo_moprha.svg';
 
-import { FaHome } from 'react-icons/fa';
+import { FaHome, FaFire } from 'react-icons/fa';
 import { BiSolidCameraMovie } from 'react-icons/bi';
 import { TbDeviceTvFilled } from 'react-icons/tb';
 
@@ -13,6 +13,7 @@ import { InputSearch } from '../InputSearch';
 
 const Links: NavbarLink[] = [
   { path: '/homePage', label: 'Home', icon: FaHome },
+  { path: '/trending', label: 'Trending', icon: FaFire },
   { path: '#', label: 'Filmes', icon: BiSolidCameraMovie },
   { path: '#', label: 'Séries', icon: TbDeviceTvFilled },
 ];

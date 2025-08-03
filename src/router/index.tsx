@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import { Layout } from '@/theme/layout';
 import HomePage from '@/pages/HomePage';
+import TrendingPage from '@/pages/TrendingPage';
 import MovieDetails from '@/pages/MovieDetails';
 
 const Router: React.FC = () => {
@@ -21,6 +22,10 @@ const Router: React.FC = () => {
         {
           path: 'homePage',
           element: <HomePage />,
+        },
+        {
+          path: 'trending',
+          element: <TrendingPage />,
         },
         {
           path: 'movieDetails/:id',

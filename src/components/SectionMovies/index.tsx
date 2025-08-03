@@ -54,8 +54,8 @@ export const SectionMovies = ({ title, children }: SectionMoviesProps) => {
 
       <div
         className={clsx(S.sectionContent, {
-          ['!ml-10']: isAtStart,
-          ['!mr-10']: isAtEnd,
+          ['!ml-5 md:!ml-10']: isAtStart,
+          ['!mr-5 md:!mr-10']: isAtEnd,
         })}
         ref={scrollRef}
       >

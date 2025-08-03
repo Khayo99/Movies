@@ -4,6 +4,7 @@ import { useNowPlaying } from '@/hooks/api/useNowPlaying';
 
 import { MovieCard } from '@/components/MovieCard';
 import { SectionMovies } from '@/components/SectionMovies';
+import { SectionGrid } from '@/components/SectionGrid';
 import { useGenres } from '@/hooks/api/useGenres';
 import { useTrendingMovies } from '@/hooks/api/useTrending';
 import { TrendingCarousel } from '@/components/TrendingCarousel';
@@ -33,23 +34,31 @@ export default function HomePage() {
         isLoading={isLoadingTrending && isLoadingNowPlaying}
       />
 
+      <SectionGrid title="Tendências">
+        {DataTrending?.results
+          .slice(0, 12)
+          .map((movie) => (
+            <MovieCard
+              key={movie.id}
+              movie={movie}
+              handleClick={handleMovieClick}
+            />
+          ))}
+      </SectionGrid>
+
       <SectionMovies title="Em lançamento">
         {DataNowPlaying?.results.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            movie={movie}
-            handleClick={handleMovieClick}
-          />
+          <div key={movie.id} className={S.sectionMovies}>
+            <MovieCard movie={movie} handleClick={handleMovieClick} />
+          </div>
         ))}
       </SectionMovies>
 
       <SectionMovies title="Filmes românticos">
         {DataGenres?.results.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            movie={movie}
-            handleClick={handleMovieClick}
-          />
+          <div key={movie.id} className={S.sectionMovies}>
+            <MovieCard movie={movie} handleClick={handleMovieClick} />
+          </div>
         ))}
       </SectionMovies>
     </div>
