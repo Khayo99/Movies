@@ -9,6 +9,7 @@ import { useGenres } from '@/hooks/api/useGenres';
 import { useTrendingMovies } from '@/hooks/api/useTrending';
 import { TrendingCarousel } from '@/components/TrendingCarousel';
 import { useNavigate } from 'react-router-dom';
+import { FaFire } from 'react-icons/fa';
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -34,13 +35,14 @@ export default function HomePage() {
         isLoading={isLoadingTrending && isLoadingNowPlaying}
       />
 
-      <SectionGrid title="Tendências">
+      <SectionGrid title="Tendências" icon={FaFire}>
         {DataTrending?.results
           .slice(0, 12)
           .map((movie) => (
             <MovieCard
               key={movie.id}
               movie={movie}
+              cardImage={`${import.meta.env.VITE_IMAGE_BASE_URL}${movie.backdrop_path}`}
               handleClick={handleMovieClick}
             />
           ))}

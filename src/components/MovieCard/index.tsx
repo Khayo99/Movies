@@ -7,16 +7,24 @@ import { FaStar } from 'react-icons/fa';
 
 interface MovieCardProps {
   movie: Movie;
+  cardImage?: string;
   handleClick?: (movie: Movie) => void;
 }
 
-export const MovieCard = ({ movie, handleClick }: MovieCardProps) => {
+export const MovieCard = ({
+  movie,
+  cardImage,
+  handleClick,
+}: MovieCardProps) => {
   return (
     <div className={S.movieCard} onClick={() => handleClick?.(movie)}>
       <div className={S.wrapper}>
         <section className={S.content}>
           <img
-            src={`${import.meta.env.VITE_IMAGE_BASE_URL}${movie.poster_path}`}
+            src={
+              cardImage ??
+              `${import.meta.env.VITE_IMAGE_BASE_URL}${movie.poster_path}`
+            }
             alt="Poster Filme"
           />
 
