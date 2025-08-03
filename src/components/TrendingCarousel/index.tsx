@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import S from './styles.module.css';
 import { FaInfoCircle, FaStar } from 'react-icons/fa';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { CircularProgress } from '@mui/material';
 
 interface TrendingCarouselProps {
   movies: Movie[];
@@ -63,7 +64,8 @@ export const TrendingCarousel = ({
       <div className={S.carouselContainer}>
         <div className={`${S.carouselWrapper} ${S.loadingState}`}>
           <div className={S.loadingContent}>
-            <div className={S.loadingSpinner}></div>
+            <CircularProgress className={S.loadingSpinner} />
+
             <p className={S.loadingText}>Carregando tendências...</p>
           </div>
         </div>

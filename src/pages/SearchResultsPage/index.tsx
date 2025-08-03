@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { MovieCard } from '@/components/MovieCard';
 import { useNavigate } from 'react-router-dom';
 import { useSearch } from '@/hooks/api/useSearch';
+import { CircularProgress } from '@mui/material';
 
 export default function SearchResultsPage() {
   const navigate = useNavigate();
@@ -19,7 +20,9 @@ export default function SearchResultsPage() {
   if (isLoading) {
     return (
       <div className={S.container}>
-        <div className={S.loading}>Buscando filmes...</div>
+        <div className={S.loading}>
+          <CircularProgress className="text-white" />
+        </div>
       </div>
     );
   }
