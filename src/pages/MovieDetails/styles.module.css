@@ -3,7 +3,7 @@
 }
 
 .heroSection {
-  @apply relative h-[70vh] md:h-[80vh] overflow-hidden;
+  @apply relative h-[70vh] md:h-[83vh] overflow-hidden;
 }
 
 .backdropImage {

@@ -38,3 +38,15 @@
     @apply hidden lg:inline-block;
   }
 }
+
+.searchContainer {
+  @apply flex items-center;
+}
+
+.searchDesktop {
+  @apply hidden md:block;
+}
+
+.searchMobile {
+  @apply block rounded-md md:hidden p-2 bg-primary text-white transition-colors;
+}

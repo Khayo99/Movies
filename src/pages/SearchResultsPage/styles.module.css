@@ -1,0 +1,31 @@
+.container {
+  @apply p-5 lg:p-10;
+}
+
+.title {
+  @apply text-3xl font-bold mb-8;
+}
+
+.query {
+  @apply text-blue-600;
+}
+
+.resultsGrid {
+  @apply grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 gap-y-6 md:gap-6;
+}
+
+.loading {
+  @apply flex items-center justify-center h-96 text-xl;
+}
+
+.noResults {
+  @apply text-center py-20;
+
+  & p {
+    @apply text-lg text-gray-600 mb-2;
+  }
+
+  & p:first-child {
+    @apply text-xl font-semibold text-gray-800 mb-4;
+  }
+}

@@ -7,6 +7,7 @@ import {
 import { Layout } from '@/theme/layout';
 import HomePage from '@/pages/HomePage';
 import TrendingPage from '@/pages/TrendingPage';
+import SearchResultsPage from '@/pages/SearchResultsPage';
 import MovieDetails from '@/pages/MovieDetails';
 
 const Router: React.FC = () => {
@@ -26,6 +27,10 @@ const Router: React.FC = () => {
         {
           path: 'trending',
           element: <TrendingPage />,
+        },
+        {
+          path: 'search',
+          element: <SearchResultsPage />,
         },
         {
           path: 'movieDetails/:id',
