@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import {
   createBrowserRouter,
   Navigate,
   RouterProvider,
 } from 'react-router-dom';
 import { Layout } from '@/theme/layout';
-import HomePage from '@/pages/HomePage';
-import TrendingPage from '@/pages/TrendingPage';
-import SearchResultsPage from '@/pages/SearchResultsPage';
-import MovieDetails from '@/pages/MovieDetails';
+
+// Lazy loading das páginas
+const HomePage = React.lazy(() => import('@/pages/HomePage'));
+const TrendingPage = React.lazy(() => import('@/pages/TrendingPage'));
+const SearchResultsPage = React.lazy(() => import('@/pages/SearchResultsPage'));
+const MovieDetails = React.lazy(() => import('@/pages/MovieDetails'));
+
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
+  </div>
+);
 
 const Router: React.FC = () => {
   const router = createBrowserRouter([
@@ -22,19 +30,35 @@ const Router: React.FC = () => {
         },
         {
           path: 'homePage',
-          element: <HomePage />,
+          element: (
+            <Suspense fallback={<PageLoader />}>
+              <HomePage />
+            </Suspense>
+          ),
         },
         {
           path: 'trending',
-          element: <TrendingPage />,
+          element: (
+            <Suspense fallback={<PageLoader />}>
+              <TrendingPage />
+            </Suspense>
+          ),
         },
         {
           path: 'search',
-          element: <SearchResultsPage />,
+          element: (
+            <Suspense fallback={<PageLoader />}>
+              <SearchResultsPage />
+            </Suspense>
+          ),
         },
         {
           path: 'movieDetails/:id',
-          element: <MovieDetails />,
+          element: (
+            <Suspense fallback={<PageLoader />}>
+              <MovieDetails />
+            </Suspense>
+          ),
         },
       ],
     },
