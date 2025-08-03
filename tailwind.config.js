@@ -10,7 +10,6 @@ export default {
         primary: '#2EADEC',
         textColor: '#1E1E1E',
         borderColor: '#D9D9D9',
-        red: '#E53A3A',
         background: '#F6F6F6',
 
       },

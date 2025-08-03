@@ -2,6 +2,8 @@ import S from './styles.module.css';
 import { formatDate } from '@/utils/dateFormat';
 
 import { IoCalendar } from 'react-icons/io5';
+import { Badge } from '../Badge';
+import { FaStar } from 'react-icons/fa';
 
 interface MovieCardProps {
   movie: Movie;
@@ -16,6 +18,13 @@ export const MovieCard = ({ movie }: MovieCardProps) => {
             src={`${import.meta.env.VITE_IMAGE_BASE_URL}${movie.poster_path}`}
             alt="Poster Filme"
           />
+
+          <div className={S.containerBadge}>
+            <Badge type={movie.vote_average >= 6 ? 'success' : 'error'}>
+              <FaStar />
+              {movie.vote_average.toFixed(1)}
+            </Badge>
+          </div>
         </section>
 
         <footer className={S.footer}>
