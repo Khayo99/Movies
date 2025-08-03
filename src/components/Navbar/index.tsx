@@ -13,8 +13,8 @@ import { InputSearch } from '../InputSearch';
 
 const Links: NavbarLink[] = [
   { path: '/homePage', label: 'Home', icon: FaHome },
-  { path: '/movies', label: 'Filmes', icon: BiSolidCameraMovie },
-  { path: '/series', label: 'Séries', icon: TbDeviceTvFilled },
+  { path: '#', label: 'Filmes', icon: BiSolidCameraMovie },
+  { path: '#', label: 'Séries', icon: TbDeviceTvFilled },
 ];
 
 export const Navbar = () => {
