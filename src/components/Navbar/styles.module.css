@@ -3,15 +3,23 @@
 }
 
 .wrapper {
-  @apply flex flex-row items-center justify-between mx-10 h-full;
+  @apply flex flex-row items-center justify-between mx-5 lg:mx-10 h-full;
 }
 
 .content {
   @apply flex flex-row items-center;
 }
 
+.logoWeb {
+  @apply hidden lg:inline-block;
+}
+
+.logoMobile {
+  @apply inline-block lg:hidden;
+}
+
 .logo {
-  @apply w-auto h-8;
+  @apply min-w-8 w-auto h-8;
 }
 
 .links {
@@ -24,5 +32,9 @@
     &.active {
       @apply text-white bg-primary rounded transition-all duration-300 ease-in-out;
     }
+  }
+
+  & .label {
+    @apply hidden lg:inline-block;
   }
 }

@@ -2,6 +2,7 @@ import S from './styles.module.css';
 
 import { NavbarLink } from '@/@types/navbar';
 import logoMorpha from '@/assets/images/logo_moprha.svg';
+import faviconMorpha from '@/assets/images/favicon.svg';
 
 import { FaHome, FaFire } from 'react-icons/fa';
 import { BiSolidCameraMovie } from 'react-icons/bi';
@@ -25,8 +26,14 @@ export const Navbar = () => {
     <nav className={S.navbar}>
       <div className={S.wrapper}>
         <section className={S.content}>
-          <Link to="/homePage">
-            <img src={logoMorpha} alt="Logo Morpha" className={S.logo} />
+          <Link to="/homePage" className="flex items-center">
+            <div className={S.logoWeb}>
+              <img src={logoMorpha} alt="Logo Morpha" className={S.logo} />
+            </div>
+
+            <div className={S.logoMobile}>
+              <img src={faviconMorpha} alt="Logo Morpha" className={S.logo} />
+            </div>
           </Link>
 
           <div className={S.links}>
@@ -39,8 +46,9 @@ export const Navbar = () => {
                     [S.active]: location.pathname === link.path,
                   })}
                 >
-                  {link.icon && <link.icon size={22} />}
-                  {link.label}
+                  <link.icon size={22} />
+
+                  <span className={S.label}>{link.label}</span>
                 </Link>
               );
             })}
