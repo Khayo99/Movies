@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://morpha-movies.vercel.app/sitemap.xml
+
+# Disallow admin or sensitive paths if any
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow search engine crawlers to access all public content
+Allow: /homePage
+Allow: /trending
+Allow: /search
+Allow: /movieDetails/
+
+# Crawl-delay (optional - helps with server load)
+Crawl-delay: 1
