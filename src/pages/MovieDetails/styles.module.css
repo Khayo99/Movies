@@ -1,0 +1,151 @@
+.container {
+  @apply min-h-screen bg-black text-white;
+}
+
+.heroSection {
+  @apply relative h-[70vh] md:h-[83vh] overflow-hidden;
+}
+
+.backdropImage {
+  @apply w-full h-full object-cover;
+}
+
+.gradientOverlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent;
+}
+
+.heroContent {
+  @apply absolute bottom-0 left-0 right-0 p-4 md:p-8 max-w-7xl mx-auto lg:p-4;
+}
+
+.titleSection {
+  @apply mb-4 md:mb-6;
+}
+
+.title {
+  @apply text-3xl md:text-4xl lg:text-6xl font-bold mb-2 leading-tight;
+}
+
+.tagline {
+  @apply text-base md:text-lg lg:text-xl text-gray-300 italic;
+}
+
+.metaInfo {
+  @apply flex flex-wrap items-center gap-2 md:gap-4 mb-4 md:mb-6 text-xs md:text-sm;
+}
+
+.rating {
+  @apply flex items-center gap-1 md:gap-2;
+}
+
+.star {
+  @apply text-yellow-400;
+}
+
+.ratingValue {
+  @apply font-semibold;
+}
+
+.year {
+  @apply text-gray-300;
+}
+
+.runtime {
+  @apply text-gray-300;
+}
+
+.adultRating {
+  @apply bg-gray-600 px-2 py-1 rounded text-xs font-bold;
+}
+
+.genresContainer {
+  @apply flex flex-wrap gap-2 mb-4 md:mb-6;
+}
+
+.genre {
+  @apply bg-primary text-white px-2 md:px-3 py-1 rounded-full text-xs font-medium;
+}
+
+.actionButtons {
+  @apply flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 mb-4 md:mb-6;
+}
+
+.playButton {
+  @apply bg-white text-black px-6 md:px-8 py-3 rounded font-bold text-base md:text-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 cursor-pointer border-none;
+}
+
+.watchlistButton {
+  @apply bg-gray-800 text-white px-4 md:px-6 py-3 rounded font-bold hover:bg-gray-700 transition-colors flex items-center justify-center gap-2 cursor-pointer border-none;
+}
+
+.overview {
+  @apply max-w-2xl text-gray-300 line-clamp-3 leading-relaxed text-sm md:text-base;
+}
+
+.detailsSection {
+  @apply max-w-7xl mx-auto p-4 md:p-8;
+}
+
+.detailsGrid {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8;
+}
+
+.posterSection {
+  @apply flex justify-center lg:justify-start order-2 md:order-1;
+}
+
+.posterImage {
+  @apply rounded-lg shadow-2xl max-w-xs md:max-w-sm w-full;
+}
+
+.infoSection {
+  @apply lg:col-span-2 order-2;
+}
+
+.sectionTitle {
+  @apply text-xl md:text-2xl font-bold mb-4 text-black md:text-white;
+}
+
+.overviewFull {
+  @apply text-gray-400 leading-relaxed mb-6 text-sm md:text-base;
+}
+
+.detailsList {
+  @apply space-y-3 md:space-y-4;
+}
+
+.detailItem {
+  @apply flex flex-col sm:flex-row sm:items-start gap-1 md:gap-2;
+}
+
+.detailLabel {
+  @apply font-semibold text-gray-400 min-w-32 text-sm md:text-base;
+}
+
+.detailValue {
+  @apply text-textColor font-medium text-sm md:text-base;
+}
+
+.productionCompanies {
+  @apply flex flex-wrap gap-3 md:gap-4 items-center;
+}
+
+.companyLogo {
+  @apply h-6 md:h-8 object-contain;
+}
+
+.loadingState {
+  @apply flex items-center justify-center min-h-screen;
+}
+
+.errorState {
+  @apply flex flex-col items-center justify-center min-h-screen text-center p-4;
+}
+
+.errorMessage {
+  @apply text-lg md:text-xl text-red-400 mb-4;
+}
+
+.backButton {
+  @apply bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors text-sm md:text-base;
+}

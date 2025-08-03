@@ -1,0 +1,33 @@
+.section {
+  @apply relative;
+
+  & .sectionTitle {
+    @apply text-xl font-bold mb-4 px-5 md:px-10;
+  }
+
+  & .sectionContent {
+    @apply flex items-stretch gap-6 py-5 px-0 -my-5 mx-0 overflow-x-auto snap-x snap-mandatory overflow-y-visible;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.scrollButton {
+  @apply absolute top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 transition-all duration-200 opacity-0 pointer-events-none;
+}
+
+.scrollButtonLeft {
+  @apply left-2;
+}
+
+.scrollButtonRight {
+  @apply right-2;
+}
+
+.section:hover .scrollButton {
+  @apply opacity-100 pointer-events-auto;
+}

@@ -1,0 +1,31 @@
+.movieCard {
+  @apply cursor-pointer transition-all duration-200 hover:shadow-lg hover:scale-105 flex-shrink-0 min-w-[160px] snap-start h-full;
+}
+
+.wrapper {
+  @apply flex flex-col h-full bg-zinc-100 rounded-lg shadow-md overflow-hidden;
+}
+
+.content {
+  @apply relative flex-shrink-0;
+
+  & img {
+    @apply w-full h-[280px] object-cover;
+  }
+
+  & .containerBadge {
+    @apply absolute top-2 right-2 z-10;
+  }
+}
+
+.footer {
+  @apply flex-1 flex flex-col justify-between p-4 min-h-[80px];
+
+  & .title {
+    @apply font-semibold text-gray-900 mb-4 line-clamp-2;
+  }
+
+  & .date {
+    @apply flex items-center space-x-3 text-gray-600 text-sm mt-auto;
+  }
+}

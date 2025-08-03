@@ -1,15 +1,10 @@
-enum OperationStatus {
-  ERROR = 'ERROR',
-  SUCCESS = 'SUCCESS',
-}
-
-type ResponseDefaultApi = {
-  operationStatus: OperationStatus;
-  message: string;
-};
-
 type ResponseData<T> = {
-  operationStatus: OperationStatus;
-  message: string;
-  data: T;
+  dates: {
+    maximum: string;
+    minimum: string;
+  };
+  page: number;
+  results: T[];
+  total_pages: number;
+  total_results: number;
 };

@@ -1,0 +1,15 @@
+.badge {
+  @apply inline-flex items-center gap-2 justify-center text-white font-semiBold rounded-3xl px-3 py-1;
+}
+
+.success {
+  @apply bg-green-500;
+}
+
+.error {
+  @apply bg-red-500;
+}
+
+.warning {
+  @apply bg-yellow-500;
+}
