@@ -1,5 +1,5 @@
 .navbar {
-  @apply h-16 bg-white shadow-md border-b;
+  @apply h-20 bg-white shadow-md border-b;
 }
 
 .wrapper {

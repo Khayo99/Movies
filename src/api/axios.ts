@@ -12,5 +12,6 @@ export const axiosInstance = axios.create({
   params: {
     api_key: import.meta.env.VITE_API_KEY,
     language: 'pt-BR',
+    with_original_language: 'en',
   },
 });

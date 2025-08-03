@@ -19,7 +19,7 @@
 }
 
 .red {
-  @apply bg-red text-white;
+  @apply bg-red-800 text-white;
 }
 
 .white {
