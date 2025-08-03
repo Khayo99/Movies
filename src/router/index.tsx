@@ -41,7 +41,7 @@ const Router: React.FC = () => {
       },
     ],
     {
-      basename: '/movies',
+      basename: import.meta.env.PROD ? '/Movies' : undefined,
     }
   );
 
