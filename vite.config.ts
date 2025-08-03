@@ -28,9 +28,12 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
       },
+      mangle: true,
     },
     cssMinify: true,
     sourcemap: false,
+    target: 'esnext',
+    reportCompressedSize: false,
   },
   base: '/',
 });
